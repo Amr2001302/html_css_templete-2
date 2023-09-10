@@ -12,25 +12,31 @@ body {
 
 html {
     scroll-behavior: smooth;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    border-style: none;
 }
 
 ul {
     list-style: none;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
 
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
