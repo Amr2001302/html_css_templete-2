@@ -307,60 +307,57 @@ header .container nav .menu {
     background-color: #19c8fa;
 }
 
-.services .serve-cont .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 30px;
-    margin: 0 auto 80px auto;
+.services .container .serve-cont {
+    display: flex;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .services .serve {
-    padding-bottom: 20px;
+    flex-basis: 45%;
+    margin-bottom: 50px;
     display: flex;
 }
 
 .services .serve i {
-    flex-basis: 60px;
-    padding-right: 20px;
+    flex-basis: 50px;
+    padding-right: 50px;
 }
 
 .services .serve .text {
     flex: 1;
-    margin-left: 10px;
 }
 
-.services .serve .text h3 {
-    color: #19c8fa;
+.services .serve .text h2 {
     padding-bottom: 20px;
+    font-size: 20px;
+    color: var(--main-color);
 }
 
 .services .serve .text p {
-    padding-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
     color: #777;
-    line-height: 2;
 }
 
 @media(max-width:992px) {
-    .services .serve-cont {
-        display: flex;
+    .services .container .serve-cont {
         flex-direction: column;
     }
 }
 
 @media(max-width:768px) {
-    .services .container {
-        display: flex;
-        flex-direction: column;
+    .services .container .serve-cont {
         text-align: center;
     }
 
-    .services .container .serve {
-        display: flex;
+    .services .container .serve-cont .serve {
         flex-direction: column;
     }
 
-    .services .container {
-        margin: 0px 0 80px;
+    .services .container .serve-cont .serve i {
+        padding: 0 0 20px 0;
     }
 }
 
@@ -652,6 +649,14 @@ header .container nav .menu {
     gap: 100px;
 }
 
+@media(max-width:768px) {
+    .skills .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 100px;
+    }
+}
+
 .skills {
     padding: 100px 0;
 }
@@ -923,6 +928,8 @@ header .container nav .menu {
     display: flex;
     margin-right: 60px;
     position: relative;
+    width: 500px;
+    max-width: 100%;
 }
 
 .subscribe .container form input[type="email"] {
@@ -932,6 +939,10 @@ header .container nav .menu {
     color: white;
     background: none;
     caret-color: var(--main-color);
+}
+
+.subscribe .container form input {
+    width: calc(100% - 130px);
 }
 
 .subscribe .container form input[type="submit"] {
@@ -970,7 +981,7 @@ header .container nav .menu {
     }
 
     .subscribe .container form {
-        margin-bottom: 40px;
+        margin: 0 0 40px;
     }
 
     .subscribe .container p {
